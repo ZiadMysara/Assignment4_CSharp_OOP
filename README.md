@@ -1,6 +1,6 @@
 # Assignment 04
 
-### Part 01
+## Part 01
 
 **Question 1:**
 What is the primary purpose of an interface in C#?
@@ -78,7 +78,7 @@ b) By using the "extends" keyword
 c) By separating interface names with commas
 d) A class cannot implement multiple interfaces
 
-### Part 02
+## Part 02
 
 **Question 01:**
 Define an interface named IShape with a property Area and a method
