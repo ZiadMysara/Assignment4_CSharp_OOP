@@ -2,7 +2,7 @@
 
 ### Part 01
 
-**Ques\*\***tion 1:\*\*
+**Question 1:**
 What is the primary purpose of an interface in C#?
 a) To provide a way to implement multiple inheritance
 b) To define a blueprint for a class
@@ -16,12 +16,14 @@ b) protected
 c) internal
 d) public
 
+
 **Question 3:**
 Can an interface contain fields in C#?
 a) Yes
 b) No
 c) Only if they are static
 d) Only if they are read only
+
 
 **Question 4:**
 In C#, can an interface inherit from another interface?
@@ -37,6 +39,7 @@ b) use
 c) extends
 d) implements
 
+
 **Question 6:**
 Can an interface contain static methods in C#?
 a) Yes
@@ -44,12 +47,14 @@ b) No
 c) Only if the interface is sealed
 d) Only if the methods are private
 
+
 **Question 7:**
 In C#, can an interface have explicit access modifiers for its members?
 a) Yes, for all members
 b) No, all members are implicitly public
 c) Yes, but only for abstract members
 d) Only if the interface is sealed
+
 
 **Question 8:**
 What is the purpose of an explicit interface implementation in C#?
@@ -64,6 +69,7 @@ a) Yes, but it must be private
 b) No, interfaces cannot have constructors
 c) Yes, but only if the interface is sealed
 d) Only if the constructor is static
+
 
 **Question 10:**
 How can a C# class implement multiple interfaces?
@@ -110,9 +116,7 @@ respective communication channel:
 The EmailNotificationService class simulates sending an email by outputting a
 message to the console.
 The SmsNotificationService class simulates sending an SMS by outputting a
-message to the console.
-
-The PushNotificationService class simulates sending a push notification by
+message to the console.The PushNotificationService class simulates sending a push notification by
 outputting a message to the console.
 In the Main method, we create instances of each notification service class and call
 the SendNotification method with sample recipient and message values.
