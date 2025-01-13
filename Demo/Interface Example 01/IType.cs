@@ -37,6 +37,7 @@ namespace Demo.Interface_Example_01
         /// // 4.3 Static Methods
         /// // 4.4 Static Events
 
+        //int x; // Error: Interfaces cannot contain fields
 
     }
 }

@@ -1,4 +1,8 @@
-﻿namespace Assignment04
+﻿using Assignment04.Question_01;
+using Assignment04.Question_02;
+using Assignment04.Question_03;
+
+namespace Assignment04
 {
     internal class Program
     {
@@ -14,6 +18,7 @@
                 c) To declare abstract methods and properties
                 d) To create instances of objects
              */
+            // Answer: b) To define a blueprint for a class
             #endregion
 
             #region Question 2
@@ -25,6 +30,7 @@
                 c) internal
                 d) public
             */
+            // Answer: a) private
             #endregion
 
             #region Question 3
@@ -36,6 +42,7 @@
                 c) Only if they are static
                 d) Only if they are read only
             */
+            // Answer: c) Only if they are static
             #endregion
 
             #region Question 4
@@ -47,6 +54,7 @@
                 c) Yes, but only if they have the same methods
                 d) Only if the interfaces are in the same namespace
              */
+            // Answer: b) Yes, interfaces can inherit from multiple interfaces
             #endregion
 
             #region Question 5
@@ -58,6 +66,7 @@
                 c) extends
                 d) implements
              */
+            // i don't know i use this " : " to implement an interface in a class in C#
             #endregion
 
             #region Question 6
@@ -69,6 +78,7 @@
                 c) Only if the interface is sealed
                 d) Only if the methods are private
              */
+            // Answer: a) Yes
             #endregion
 
             #region Question 7
@@ -81,6 +91,7 @@
                 d) Only if the interface is sealed
  
             */
+            // Answer: a) Yes, for all members
             #endregion
 
             #region Question 8
@@ -92,6 +103,7 @@
                 c) To allow multiple classes to implement the same interface
                 d) To speed up method resolution 
             */
+            // Answer: b) To provide a clear separation between interface and class members
             #endregion
 
             #region Question 9
@@ -104,6 +116,7 @@
                 d) Only if the constructor is static
  
             */
+            // Answer: b) No, interfaces cannot have constructors
             #endregion
 
             #region Question 10
@@ -115,6 +128,7 @@
                 c) By separating interface names with commas
                 d) A class cannot implement multiple interfaces 
             */
+            // Answer: c) By separating interface names with commas
             #endregion
             #endregion
 
@@ -128,6 +142,12 @@
                 implementation by creating instances of both classes and displaying their shape 
                 information. 
             */
+            IShape shape = new Circle { Radius = 5 };
+            shape.DisplayShapeInfo();
+            Console.WriteLine();
+
+            shape = new Rectangle { Dim01 = 5, Dim02 = 10 };
+            shape.DisplayShapeInfo();
             #endregion
 
             #region Question 2
@@ -151,6 +171,21 @@
                 IAuthenticationService interface and providing the desired logic for 
                 authentication and authorization.
             */
+
+            DateBase.Users.Add(new User("ziad", "123"));
+            DateBase.Users.Add(new User("mohamed", "456"));
+            DateBase.Users.Add(new User("ahmed", "789"));
+
+            IAuthenticationService authenticationService = new BasicAuthenticationService();
+            Console.WriteLine("AuthorizeUser");
+            Console.WriteLine(authenticationService.AuthorizeUser("ziad", "123")); // fasle // already exist
+            Console.WriteLine(authenticationService.AuthorizeUser("ziad2", "123")); // true
+            Console.WriteLine();
+
+            Console.WriteLine("AuthenticateUser");
+            Console.WriteLine(authenticationService.AuthenticateUser("mohamed", "456")); // true // it is exist
+            Console.WriteLine(authenticationService.AuthenticateUser("mohamed", "123")); // false // it is not exist
+
             #endregion
 
             #region Question 3
@@ -174,6 +209,16 @@
                 channels by creating new classes that implement the INotificationService 
                 interface and provide the specific logic for each channel.
             */
+
+            INotificationService notificationService = new EmailNotificationService();
+            notificationService.SendNotification("ziad", "Hello from email");
+
+            notificationService = new SmsNotificationService();
+            notificationService.SendNotification("ziad", "Hello from sms");
+
+            notificationService = new PushNotificationService();
+            notificationService.SendNotification("ziad", "Hello from push");
+
             #endregion
             #endregion
         }
